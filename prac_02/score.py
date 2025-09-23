@@ -2,15 +2,19 @@
 CP1404/CP5632 - Practical
 Program to determine score status
 """
+import random
 
 
 def main():
-    score = float(input("Enter score: "))
-    result = determine_score(score)
+    user_score = float(input("Enter score: "))
+    result = determine_result(user_score)
+    print(result)
+    random_score = random.randint(0, 100)
+    result = determine_result(random_score)
     print(result)
 
 
-def determine_score(score):
+def determine_result(score):
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
