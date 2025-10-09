@@ -7,8 +7,8 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = load_data(FILENAME)
-    print_subject(data)
+    subject_information = load_data(FILENAME)
+    print_subject(subject_information)
 
 
 def load_data(filename=FILENAME):
@@ -29,8 +29,8 @@ def load_data(filename=FILENAME):
     return things
 
 
-def print_subject(data):
-    for subject in data:
+def print_subject(subject_information):
+    for subject in subject_information:
         print(f"{subject[0]} is taught by {subject[1]} and has {subject[2]} students")
 
 
