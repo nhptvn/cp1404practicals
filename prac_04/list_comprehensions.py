@@ -47,7 +47,7 @@ print(numbers)
 numbers_greater_than_9 = []
 for number in numbers:
     if number > 9:
-        numbers.append(number)
+        numbers_greater_than_9.append(number)
 print(numbers_greater_than_9)
 
 # Use a list comprehension and the join string method
