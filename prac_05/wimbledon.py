@@ -34,10 +34,10 @@ def process_records(records):
     countries = set()
     for record in records:
         countries.add(record[1])
-        try:
+        if record[2] not in champion_to_win:
+            champion_to_win[record[2]] = champion_to_win[record[2]]
+        else:
             champion_to_win[record[2]] = champion_to_win[record[2]] + 1
-        except KeyError:
-            champion_to_win[record[2]] = 1
     return champion_to_win, countries
 
 
