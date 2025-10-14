@@ -6,6 +6,7 @@ Actual: 33 mins
 
 
 def main():
+    """Get email from user and print a name relevant to the email."""
     email_to_name = {}
     email = input("Email: ")
     while email != "":
@@ -20,6 +21,7 @@ def main():
 
 
 def extract_name_from_email(email):
+    """Extract name from email."""
     name_in_email = email.split("@")[0]
     name_part = name_in_email.split(".")
     full_name = " ".join(name_part).title()
