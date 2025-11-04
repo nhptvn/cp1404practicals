@@ -14,4 +14,4 @@ Throughout this subject, I have learned many important lessons about writing cle
 ## Useful links
 
 - [Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns)
-- [CP1404 Practicals Instructions Repo] (https://github.com/CP1404/Practicals?tab=readme-ov-file#readme)
+- [CP1404 Practicals Instructions Repo](https://github.com/CP1404/Practicals?tab=readme-ov-file#readme)
