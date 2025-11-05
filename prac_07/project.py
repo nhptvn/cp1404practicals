@@ -5,7 +5,9 @@ Actual:
 
 
 class Project:
+    """Represent a Project object."""
     def __init__(self, name, start_date, priority, cost_estimate, completion_percentage):
+        """Declare a project instance."""
         self.name = name
         self.start_date = start_date
         self.priority = int(priority)
@@ -17,7 +19,9 @@ class Project:
         return self.priority < other.priority
 
     def is_complete(self):
+        """Return true if completion is 100 or greater."""
         return self.completion_percentage >= 100
 
     def __str__(self):
+        """Return a string representation of the output."""
         return f"{self.name}, start: {self.start_date}, priority {self.priority}, estimate: ${self.cost_estimate:.2f}, completion: {self.completion_percentage}%"

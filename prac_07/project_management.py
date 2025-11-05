@@ -10,6 +10,7 @@ FILENAME = "projects.txt"
 
 
 def main():
+    """Main menu of the project management program. """
     projects = load_data(FILENAME)
     print("Welcome to Pythonic Project Management")
     print(f"Loaded {len(projects)} from {FILENAME}")
@@ -41,6 +42,7 @@ def main():
 
 
 def load_data(file_name):
+    """Load projects from a file."""
     projects = []
     in_file = open(file_name, "r")
     in_file.readline()
@@ -54,6 +56,7 @@ def load_data(file_name):
 
 
 def save_data(projects, file_name):
+    """Save projects into a file."""
     out_file = open("projects.txt", "r")
     for project in projects:
         out_file.write(
@@ -62,6 +65,7 @@ def save_data(projects, file_name):
 
 
 def display_projects(projects):
+    """Display a list of incomplete and complete projects."""
     incomplete_projects = [project for project in projects if project.completion_percentage < 100]
     complete_projects = [project for project in projects if project.completion_percentage == 100]
     incomplete_projects.sort()
@@ -75,6 +79,7 @@ def display_projects(projects):
 
 
 def filter_projects(projects):
+    """Display projects starting after a given date."""
     date_str = input("Show projects that start after the date (dd/mm/yyyy): ")
     filter_date = datetime.strptime(date_str, "%d/%m/%Y").date()
     for project in projects:
@@ -84,6 +89,7 @@ def filter_projects(projects):
 
 
 def add_project(projects):
+    """Add a new project to the list."""
     print("Let's add a new project")
     name = input("Name: ")
     start_date = input("Start date (dd/mm/yy): ")
@@ -95,6 +101,7 @@ def add_project(projects):
 
 
 def update_project(projects):
+    """Update an existing project."""
     for i, project in enumerate(projects):
         print(f"{i} {project}")
     project_choice = int(input("Project choice: "))
