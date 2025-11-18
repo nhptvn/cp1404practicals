@@ -5,7 +5,7 @@ def main():
     taxi1 = SilverServiceTaxi("13cabs", 200, 2)
     taxi1.drive(18)
     print(taxi1)
-    print(taxi1.get_fare())
+    print(f"Total fare: ${taxi1.get_fare():.2f}")
 
 
 main()
