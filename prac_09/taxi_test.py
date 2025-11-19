@@ -2,6 +2,7 @@ from prac_09.taxi import Taxi
 
 
 def main():
+    """Drive a taxi program."""
     taxi1 = Taxi("Prius 1", 100)
     taxi1.drive(40)
     print(taxi1)

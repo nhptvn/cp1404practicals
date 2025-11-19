@@ -2,6 +2,7 @@ from prac_09.unreliable_car import UnreliableCar
 
 
 def main():
+    """Drive reliable car program."""
     reliable_car = UnreliableCar("Toyota", 10000, 90)
     reliable_car.drive(50)
     unreliable_car = UnreliableCar("Nissan", 10000, 10)

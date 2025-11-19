@@ -5,6 +5,7 @@ MENU = "q)uit, c)hoose taxi, d)rive\n>>> "
 
 
 def main():
+    """Main menu of driving a taxi program."""
     print("Let's drive!")
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
     bill_to_date = 0.0
@@ -12,7 +13,7 @@ def main():
     menu_choice = input(MENU).lower()
     while menu_choice != "q":
         if menu_choice == "c":
-            current_taxi = choose_taxi(taxis, current_taxi)
+            current_taxi = choose_taxi(taxis)
         elif menu_choice == "d":
             bill_to_date = drive(current_taxi, bill_to_date)
         else:
@@ -25,7 +26,8 @@ def main():
         print(f"{i} - {taxi}")
 
 
-def choose_taxi(taxis, current_taxi):
+def choose_taxi(taxis):
+    """Return a selected taxi."""
     print("Taxis available: ")
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
@@ -37,7 +39,8 @@ def choose_taxi(taxis, current_taxi):
     return current_taxi
 
 
-def drive(current_taxi, bill_to_date):
+def drive_taxi(current_taxi, bill_to_date):
+    """Drive selected taxi and return the bill."""
     if current_taxi is None:
         print("You need to choose a taxi before you can drive")
         return bill_to_date
